@@ -9,4 +9,4 @@ You can do this by running `nmcli con add type ethernet con-name "dock" ifname <
 
 Next on the host machine run `ssh-keygen -t ed25519` and enter the password of the slave machine if asked, leave the file location as the default location, and leave the next 2 passwords blank so that it can mount automatically. Then run `ssh-copy-id <Slave machine account username>@10.10.10.2`.
 
-
+Finally you need to edit the .sh file with sudo. All the lines that need editing are commented out with three hashtags, and must be uncommented for propper functionallity. Some lines may have multiple places that need editing, and I've tried to make it easy to find what needs editing.
