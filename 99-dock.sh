@@ -14,7 +14,7 @@ if [ "$CONNECTION_ID" = "dock" ]; then
             # Short sleep to ensure the network stack is ready
             sleep 1
 	    # The part that mounts the pi :D
-###            runuser -u "$TARGET_USER" -- sshfs <Your slave machines username>@10.10.10.2:/ /path/to/mount/directory -o reconnect,ServerAliveInterval=5,ServerAliveCountMax=3,idmap=user,IdentityFile=~/.ssh/id_ed25519
+###            runuser -u "$TARGET_USER" -- sshfs <Your slave machines username>@10.10.10.2:/ /path/to/mount/directory -o reconnect,ServerAliveInterval=5,ServerAliveCountMax=3,idmap=user,IdentityFile=/home/${TARGET_USER}/.ssh/id_ed25519
 	    # Notifacations for docking
 ###            runuser -u "$TARGET_USER" -- notify-send -i drive-harddisk "Docked device detected" "The device should be mounted at your chosen location"
 
