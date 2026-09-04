@@ -13,3 +13,5 @@ Finally you need to edit the .sh file with sudo. All the lines that need editing
 
 ## Extra things to know
 While you can disconnect your docked device by simply pulling the ethernet cable, it's recomended to close anything that's currently using any of the files in the docked device (mainly things like your file explorer, and your terminal if you are currently cd'd into the device mount) as these will likely hang for a little while otherwise. If you forget to do this, you can just plug the device back in, and then the prossecces should catch up again, and you can then leave the docked device.
+
+Because this works off of an IPv4 address over an ethernet cable, you can also use the ethernet connection to SSH into the docked device, and you can SSH into the host device from the docked device. Just a little extra that happens to be possible, and can be used so you don't have to rely on a WiFi connection for SSH.
