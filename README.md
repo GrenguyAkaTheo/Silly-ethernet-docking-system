@@ -10,3 +10,6 @@ You can do this by running `nmcli con add type ethernet con-name "dock" ifname <
 Next on the host machine run `ssh-keygen -t ed25519` and enter the password of the slave machine if asked, leave the file location as the default location, and leave the next 2 passwords blank so that it can mount automatically. Then run `ssh-copy-id <Slave machine account username>@10.10.10.2`.
 
 Finally you need to edit the .sh file with sudo. All the lines that need editing are commented out with three hashtags, and must be uncommented for propper functionallity. Some lines may have multiple places that need editing, and I've tried to make it easy to find what needs editing.
+
+## Extra things to know
+While you can disconnect your docked device by simply pulling the ethernet cable, it's recomended to close anything that's currently using any of the files in the docked device (mainly things like your file explorer, and your terminal if you are currently cd'd into the device mount) as these will likely hang for a little while otherwise. If you forget to do this, you can just plug the device back in, and then the prossecces should catch up again, and you can then leave the docked device.
